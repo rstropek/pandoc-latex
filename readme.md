@@ -8,13 +8,26 @@ Therefore, I created a Docker image based on [*pandoc/latex*](https://hub.docker
 
 ## Usage
 
-The following `docker run` statement will generate *dist/out.pdf* from the markdown file *mydoc.md* with the [YAML metadata](https://pandoc.org/MANUAL.html#extension-yaml_metadata_block) in *mydoc.yaml*.
+The following `docker run` statement will generate *mydoc.pdf* from the markdown file *mydoc.md* with the [YAML metadata](https://pandoc.org/MANUAL.html#extension-yaml_metadata_block) in *mydoc.yaml*. Try to run the statement inside the *example* folder.
 
-```bash
-docker run --rm -v /folder-with-markdown-files:/data -w /data  rstropek/pandoc-latex -f markdown \
-    --template ./templates/eisvogel.latex \
+### Linux
+
+```
+docker run --rm -v `pwd`:/data -w /data  rstropek/pandoc-latex -f markdown \
+    --template https://rawcdn.githack.com/Wandmalfarbe/pandoc-latex-template/e6c05b46a358519eb07cbbec354797efd8fde9e2/eisvogel.tex \
     -t latex \
-    -o dist/out.pdf \
+    -o mydoc.pdf \
     --metadata-file=mydoc.yaml \
+    mydoc.md
+```
+
+### Windows
+
+```
+docker run --rm -v %cd%:/data -w /data  rstropek/pandoc-latex -f markdown ^
+    --template https://rawcdn.githack.com/Wandmalfarbe/pandoc-latex-template/e6c05b46a358519eb07cbbec354797efd8fde9e2/eisvogel.tex ^
+    -t latex ^
+    -o mydoc.pdf ^
+    --metadata-file=mydoc.yaml ^
     mydoc.md
 ```
