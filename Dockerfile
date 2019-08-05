@@ -16,4 +16,5 @@ RUN tlmgr install \
     pagecolor \
     adjustbox \
     collectbox \
-    titlesec
+    titlesec \
+    fvextra
