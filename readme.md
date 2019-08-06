@@ -4,7 +4,11 @@
 
 *Pandoc* has an official Docker image [*pandoc/latex*](https://hub.docker.com/r/pandoc/latex). I like to use the [*Eisvogel* LaTeX template](https://github.com/Wandmalfarbe/pandoc-latex-template). Unfortunately, you cannot build PDFs from Markdown using this template with *pandoc/latex*. Some packages from *TeX Live* are missing.
 
-Therefore, I created a Docker image based on [*pandoc/latex*](https://hub.docker.com/r/pandoc/latex) that can build PDFs using *Eisvogel*.
+Therefore, I created a Docker image based on [*pandoc/latex*](https://hub.docker.com/r/pandoc/latex) that can build PDFs using *Eisvogel*. You can find it on *Docker Hub* under [*rstropek/pandoc-latex*](https://hub.docker.com/r/rstropek/pandoc-latex).
+
+## Example
+
+The [*example*](example) folder contains an example document (markdown content, YAML metadata) including the generated PDF document.
 
 ## Usage
 
