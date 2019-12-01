@@ -17,4 +17,5 @@ RUN tlmgr install \
     adjustbox \
     collectbox \
     titlesec \
-    fvextra
+    fvextra \
+    pdftexcmds
