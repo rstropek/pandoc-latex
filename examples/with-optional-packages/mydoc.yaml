@@ -1,0 +1,30 @@
+title: Demo Document
+date: \today
+subtitle:
+  Ea deserunt mollit culpa proident consectetur non. Ut sunt proident incididunt veniam eiusmod incididunt non irure ut ut amet labore deserunt irure.
+  Sint est incididunt nulla non commodo adipisicing cillum ullamco consectetur sit. In quis ut aliqua pariatur minim ipsum sunt velit veniam commodo nisi
+  fugiat. Occaecat quis id minim veniam enim ullamco incididunt anim. Consequat proident aliqua cupidatat exercitation veniam ullamco aliquip qui voluptate
+  irure fugiat fugiat.
+author:
+  - Rainer Stropek (software architects)
+keywords: [demo, document]
+papersize: a4
+links-as-notes: true
+toc: true
+toc-depth: 2
+toc-own-page: true
+lang: en
+titlepage: true
+footer-left: Demo
+logo: software-architects-logo.pdf
+logo-width: 200
+numbersections: true
+footnotes-pretty: true
+
+# Allow to use awesomebox (https://github.com/milouse/latex-awesomebox)
+header-includes:
+- |
+  ```{=latex}
+  \usepackage{awesomebox}
+  ```
+

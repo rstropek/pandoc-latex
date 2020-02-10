@@ -1,0 +1,14 @@
+language: minimal
+sudo: true
+
+before_install:
+  - git clone https://github.com/bats-core/bats-core.git
+  - cd bats-core
+  - git checkout v1.1.0
+  - ./install.sh /usr/local
+  - bats -v
+
+script:
+  - docker build -t rstropek/pandoc-latex:test .
+  - bats tests
+
