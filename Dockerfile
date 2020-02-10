@@ -1,7 +1,6 @@
 FROM pandoc/latex:2.9.1.1
 
-RUN tlmgr list | grep abs
-
+RUN tlmgr list
 RUN tlmgr update --self && \
     tlmgr install \
     merriweather \
