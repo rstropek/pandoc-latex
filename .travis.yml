@@ -1,12 +1,15 @@
-language: minimal
+language: shell
 sudo: true
 
 before_install:
+  - cd /tmp
   - git clone https://github.com/bats-core/bats-core.git
   - cd bats-core
   - git checkout v1.1.0
-  - ./install.sh /usr/local
+  - sudo ./install.sh /usr/local
   - bats -v
+  - pwd bats
+  - cd ${TRAVIS_BUILD_DIR}
 
 script:
   - docker build -t rstropek/pandoc-latex:test .
