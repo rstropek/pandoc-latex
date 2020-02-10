@@ -1,9 +1,9 @@
-FROM pandoc/latex
-RUN apk update \
-    && apk add texlive-full
-ENV PATH $PATH:/opt/texlive/texdir/bin/x86_64-linux
-RUN tlmgr update --self
-RUN tlmgr install \
+FROM pandoc/latex:2.9.1.1
+
+RUN tlmgr list | grep abs
+
+RUN tlmgr update --self && \
+    tlmgr install \
     merriweather \
     fontaxes \
     mweights \
@@ -18,4 +18,9 @@ RUN tlmgr install \
     collectbox \
     titlesec \
     fvextra \
-    pdftexcmds
+    pdftexcmds \
+    footnotebackref \
+    zref \
+    fontawesome5 \
+    footmisc \
+    sectsty
