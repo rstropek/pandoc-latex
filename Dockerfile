@@ -1,4 +1,4 @@
-FROM pandoc/latex:2.9.1.1
+FROM pandoc/latex:2.9.2
 
 RUN tlmgr list
 RUN tlmgr update --self && \
