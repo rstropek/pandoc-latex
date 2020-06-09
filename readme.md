@@ -74,3 +74,41 @@ Make sure you have [BATS](https://github.com/bats-core/bats-core) installed.
 bats tests
 ```
 
+## Tips and Tricks
+
+### Manual Page Breaks
+
+To insert manual page breaks, download [*pagebreak.lua*](https://github.com/pandoc/lua-filters/blob/master/pagebreak/pagebreak.lua). In the `docker run` statement shown above, you can reference it using the `--lua-filter pagebreak.lua` switch (e.g. `docker run ... rstropek/pandoc-latex -f markdown ... -t latex --lua-filter pagebreak.lua ...`). Once you did that, you can add page breaks in your *.md* files using `\newpage`. Example:
+
+```markdown
+# Chapter 1
+
+Some text goes here.
+
+\newpage
+
+# Chapter 2
+
+Additional text goes here.
+```
+
+### References
+
+You can read about citations in the [Pandoc documentation](https://pandoc.org/MANUAL.html#citations). Here is a checklist for what you have to do:
+
+* Find a [citation style](https://www.zotero.org/styles) that you would like to use.
+* Get the link to the CSL file (e.g. *https://www.zotero.org/styles/ieee* for citation style *IEEE*).
+* Create a bibliography file. Example *bib.yaml*:
+
+```yaml
+references:
+- title: Azure Homepage
+  container-title: Microsoft Website
+  id: Azure-Homepage
+  author: Microsoft
+  URL: https://azure.microsoft.com
+  type: webpage
+```
+
+* Add references to markdown (e.g. `Bla bla [see @Azure-Homepage]. Bla bla.`).
+* Add the following options to the call to Pandoc: ` --filter pandoc-citeproc --bibliography=bib.yaml --csl=https://www.zotero.org/styles/ieee`
