@@ -63,7 +63,7 @@ docker run --rm ^
 ```bash
 # Use a significative tag
 # (e.g. here, follow the version of pandoc/latex used as the basis in the Dockerfile).
-docker build -t rstropek/pandoc-latex:2.9.1.1 .
+docker build -t rstropek/pandoc-latex:latest .
 ```
 
 ### Tests
