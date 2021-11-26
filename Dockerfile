@@ -1,4 +1,5 @@
-FROM pandoc/latex:2.16.2
+ARG LATEX_IMAGE_TAG=latest
+FROM pandoc/latex:$LATEX_IMAGE_TAG
 
 RUN tlmgr list
 RUN tlmgr update --self && \
