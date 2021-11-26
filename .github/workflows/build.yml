@@ -6,7 +6,7 @@ on:
       - 'master'
 
 jobs:
-  check-bats-version:
+  build-and-deploy:
     runs-on: ubuntu-latest
     env:
       LATEX_IMAGE_TAG: "2.16.2"
@@ -34,15 +34,27 @@ jobs:
       - name: Docker Build
         uses: docker/build-push-action@v2
         with:
-          tags: rstropek/pandoc-latex:${{ env.LATEX_IMAGE_TAG }}
+          tags: rstropek/pandoc-latex:test
           build-args: 'LATEX_IMAGE_TAG=${{ env.LATEX_IMAGE_TAG }}'
 
       - name: Run BATS Tests
         run: bats tests/test-example-generation.bats
+
+      - name: Docker Tags
+        run: |
+          docker tag rstropek/pandoc-latex:test rstropek/pandoc-latex:${{ env.LATEX_IMAGE_TAG }} 
+          docker tag rstropek/pandoc-latex:test rstropek/pandoc-latex:latest
         
       - name: Docker Build
         uses: docker/build-push-action@v2
         with:
           push: true
           tags: rstropek/pandoc-latex:${{ env.LATEX_IMAGE_TAG }}
+          build-args: 'LATEX_IMAGE_TAG=${{ env.LATEX_IMAGE_TAG }}'
+        
+      - name: Docker Build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: rstropek/pandoc-latex:latest
           build-args: 'LATEX_IMAGE_TAG=${{ env.LATEX_IMAGE_TAG }}'
