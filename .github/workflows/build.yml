@@ -14,7 +14,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      LATEX_IMAGE_TAG: "2.16.2"
+      LATEX_IMAGE_TAG: "2.18.0"
     steps:
       - uses: actions/checkout@v2
 

@@ -23,4 +23,5 @@ RUN tlmgr update --self && \
     zref \
     fontawesome5 \
     footmisc \
-    sectsty
+    sectsty \
+    koma-script
