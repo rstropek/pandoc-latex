@@ -25,4 +25,5 @@ RUN tlmgr update --self && \
     footmisc \
     sectsty \
     koma-script \
-    lineno
+    lineno \
+    awesomebox
