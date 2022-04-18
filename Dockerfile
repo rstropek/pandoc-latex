@@ -24,4 +24,5 @@ RUN tlmgr update --self && \
     fontawesome5 \
     footmisc \
     sectsty \
-    koma-script
+    koma-script \
+    lineno
