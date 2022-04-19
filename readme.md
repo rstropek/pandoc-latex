@@ -1,5 +1,7 @@
 # Pandoc LaTeX with Eisvogel
 
+![Docker Image Version (latest semver)](https://img.shields.io/docker/v/rstropek/pandoc-latex)
+
 
 ## Introduction
 
