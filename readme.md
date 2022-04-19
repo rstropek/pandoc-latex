@@ -33,7 +33,7 @@ docker run --rm \
     -w /data \
     rstropek/pandoc-latex \
     -f markdown \
-    --template https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/v1.4.0/eisvogel.tex \
+    --template https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/v2.0.0/eisvogel.tex \
     -t latex \
     -o mydoc.pdf \
     --metadata-file=mydoc.yaml \
@@ -48,7 +48,7 @@ docker run --rm ^
     -w /data ^
     rstropek/pandoc-latex ^
     -f markdown ^
-    --template https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/v1.4.0/eisvogel.tex ^
+    --template https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/v2.0.0/eisvogel.tex ^
     -t latex ^
     -o mydoc.pdf ^
     --metadata-file=mydoc.yaml ^

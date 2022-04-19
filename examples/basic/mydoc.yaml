@@ -17,5 +17,5 @@ lang: en
 titlepage: true
 footer-left: Demo
 logo: software-architects-logo.pdf
-logo-width: 200
+logo-width: 200pt
 numbersections: true
