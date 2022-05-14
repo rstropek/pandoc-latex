@@ -26,4 +26,6 @@ RUN tlmgr update --self && \
     sectsty \
     koma-script \
     lineno \
+    ctex \
     awesomebox
+RUN apk add --update ttf-dejavu font-isas-misc ttf-droid ttf-droid-nonlatin fontconfig && rm -rf /var/cache/apk/*
