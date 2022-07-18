@@ -26,4 +26,6 @@ RUN tlmgr update --self && \
     sectsty \
     koma-script \
     lineno \
-    awesomebox
+    awesomebox \
+    background \
+    everypage
