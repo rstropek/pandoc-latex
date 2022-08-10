@@ -28,4 +28,5 @@ RUN tlmgr update --self && \
     lineno \
     awesomebox \
     background \
-    everypage
+    everypage \
+    xurl
