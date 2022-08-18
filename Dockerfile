@@ -29,4 +29,5 @@ RUN tlmgr update --self && \
     awesomebox \
     background \
     everypage \
-    xurl
+    xurl \
+    epstopdf
