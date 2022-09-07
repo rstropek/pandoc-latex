@@ -10,16 +10,6 @@ RUN apk add --no-cache \
     chromium \
     nodejs \
     npm 
-#    chromium \
-#    ttf-dejavu \
-#    nss \
-#    freetype \
-#    harfbuzz \
-#    ca-certificates \
-#    ttf-freefont \
-#    nodejs \
-#    npm \
-#    yarn
 
 RUN wget "http://downloads.sourceforge.net/project/plantuml/${PLANTUML_VERSION}/plantuml.${PLANTUML_VERSION}.jar" -O /usr/bin/plantuml.jar \
   && printf '#!/bin/sh\njava -jar /usr/bin/plantuml.jar $@' > /usr/bin/plantuml \
