@@ -27,6 +27,12 @@ See [this issue](https://github.com/Wandmalfarbe/pandoc-latex-template/issues/81
 
 Tested with [*Eisvogel* LaTeX template](https://github.com/Wandmalfarbe/pandoc-latex-template) 1.4.0.
 
+### Suppported Filters
+
+The following filters are supported
+* [pandoc-plantuml-filter](https://github.com/timofurrer/pandoc-plantuml-filter)
+* [mermaid-filter](https://github.com/raghur/mermaid-filter)
+
 ### Linux
 
 ```bash

@@ -40,3 +40,51 @@ Listing: Demo Listing
 
 \tipbox{Lorem ipsum...}
 
+## Samples with PlantUML
+
+### PlantUML Sequence Diagram
+```plantuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+```
+
+### PlantUML State Diagram
+```plantuml
+[*] --> State1
+State1 --> [*]
+State1 : this is a string
+State1 : this is another string
+
+State1 -> State2
+State2 --> [*]
+```
+
+## Samples with Mermaid
+
+### Mermaid Flowchart
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+### Mermaid Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+```
