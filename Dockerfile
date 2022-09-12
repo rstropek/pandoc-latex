@@ -5,7 +5,7 @@ ENV PLANTUML_VERSION 1.2022.7
 
 RUN apk add --no-cache \
     py3-pip \ 
-    openjdk17-jre \
+    openjdk17-jre-headless \
     graphviz \
     chromium \
     nodejs \
