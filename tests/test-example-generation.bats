@@ -16,14 +16,14 @@ verify_example() {
 	# Precondition: no PDF file
 	[ ! -f "/tmp/md-to-pdf/${tdir}/mydoc.pdf" ]
 
-	# Generate it by using pandoc-latex-template 1.4.0
+	# Generate it by using pandoc-latex-template 2.4.0
 	run docker run --rm \
 		-v "/tmp/md-to-pdf/${tdir}":/data \
 		-w /data  \
 		--user `id -u`:`id -g` \
 		rstropek/pandoc-latex:test \
 		-f markdown \
-		--template https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/v2.0.0/eisvogel.tex \
+		--template https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/v2.4.0/eisvogel.tex \
 		-t latex \
 		-o mydoc.pdf \
 		--metadata-file=mydoc.yaml \

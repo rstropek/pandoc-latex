@@ -31,5 +31,8 @@ RUN tlmgr update --self && \
     everypage \
     xurl \
     epstopdf \
+    hardwrap \
+    catchfile \
     ctex
+    
 RUN apk add --update ttf-dejavu font-isas-misc ttf-droid ttf-droid-nonlatin fontconfig && rm -rf /var/cache/apk/*

@@ -14,19 +14,19 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      LATEX_IMAGE_TAG: "2.18.0"
+      LATEX_IMAGE_TAG: "3.1"
     steps:
       - uses: actions/checkout@v2
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
+        uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v2
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'
       - name: Install Bash Automated Testing System (BATS)
         run: npm install -g bats
 
