@@ -30,4 +30,5 @@ RUN tlmgr update --self && \
     background \
     everypage \
     xurl \
-    epstopdf
+    epstopdf \
+    hardwrap
