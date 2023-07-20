@@ -31,4 +31,5 @@ RUN tlmgr update --self && \
     everypage \
     xurl \
     epstopdf \
-    hardwrap
+    hardwrap \
+    catchfile
